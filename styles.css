@@ -1,0 +1,392 @@
+/* Normalize */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h3 {
+    margin:0;
+}
+
+.wrapper {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media(max-width: 799px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
+/* Navigation */
+
+.header {
+    display: inline-block;
+}
+
+@media(min-width: 800px) {
+  .header {
+    height: 150px;
+  }
+}
+
+@media(max-width: 799px) {
+  .header {
+    height: 100px;
+  }
+}
+
+.nameBlock {
+    height: 40%;
+    font-size: 2rem;
+    margin: 2% 0;
+    position: relative;
+    float: left;
+    display: inline-block;
+}
+
+.navigation li {
+    display: inline;
+}
+
+.navTable {
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.navTable td {
+    color: black;
+    transition: all .2s ease-in-out;
+}
+
+.navTable td:hover {
+    color: tomato;
+}
+
+td.active {
+    color: tomato;
+}
+
+.slideDiv {
+    width: 100%;
+    height: 3px;
+    position: relative;
+}
+
+.slider {
+    position: absolute;
+    height: 3px;
+    width: 20%;
+    background: tomato;
+    transition: all .25s ease-in-out;
+}
+/* Main content section */
+
+.container {
+    opacity: 0;
+    visibility: hidden;
+    height: 70%;
+    width: 100%;
+    position: absolute;
+    transition: all .25s ease-in-out;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 799px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.active {
+    visibility: visible;
+    opacity: 1;
+}
+/* Carousel */
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: none;
+}
+
+.innerCarousel {
+    width: 500%;
+    height: 100%;
+    transition: all .25s ease-in-out;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.carouselSlides {
+    margin: -2px;
+    display: inline-block;
+    height: 100%;
+    width: 20%;
+    transition: all .25s ease-in-out;
+    position: relative;
+    float: left;
+}
+
+.carouselImg {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.example {
+    margin: 2% auto;
+    position: relative;
+    height: 80%;
+    width: 80%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+.lefthand {
+    float: left;
+    position: relative;
+    width: 100%;
+    margin: 0 0;
+}
+
+.righthand {
+    float: left;
+    position: relative;
+    width: 100%;
+    margin: 4% auto;
+}
+
+.spa {
+    width: 33%;
+    margin: 2% auto;
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+
+@media(max-width: 799px) {
+  .spa {
+    width: 100%;
+  }
+}
+
+.spa img {
+    width: 95%;
+    border: 1px solid #ddd;
+    display: inline;
+    transition: all 0.2s ease-in-out;
+    margin-top: 4%;
+}
+
+.spa img:hover {
+    transform: scale(1.07)
+}
+
+.exampleImage {
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    width: 40%;
+    margin: 0 0;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+}
+
+.exampleImage img {
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    float: none;
+    vertical-align: middle;
+    transition: all 0.25 ease-in-out;
+}
+
+.hideImg {
+    display: none;
+    transition: all 0.25 ease-in-out;
+}
+
+.activeImg {
+    display: block;
+    transition: all 0.25 ease-in-out;
+}
+
+.exampleText {
+    display: inline-block;
+    height: 100%;
+    width: 40%;
+    margin: 0 0;
+    position: relative;
+    top: 0;
+    float: right;
+    right: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.exampleText h3 {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    padding-bottom: 4%;
+}
+
+.navButtons {
+    width: 40%;
+    margin: 3% auto 0 auto;
+    text-align: center;
+}
+
+.btn {
+    width: 20%;
+    height: 5%;
+    background: #fff;
+    color: tomato;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    display: inline-block;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    color: #fff;
+    background: tomato;
+}
+
+.left {
+    position: relative;
+    margin: 0 10 0 auto;
+}
+
+.right {
+    position: relative;
+    margin: 0 auto 0 10;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.imgControls {
+    height: 100%;
+    width: 50px;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.up {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 10 0;
+    vertical-align: middle;
+    margin-top:180px;
+    position: relative;
+
+}
+
+.up img {
+    width: 90%;
+}
+
+.down {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 10 0;
+    vertical-align: middle;
+        position: relative;
+
+
+}
+
+.down img {
+    width: 90%;
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+}
+
+.example a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+    transition: all 0.25s ease-in-out;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+.example a:hover {
+    color: tomato;
+}
+
+.hello {
+    font-weight: 600;
+}
+
+.please {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+.home {
+    font-size: 18px;
+}
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    height: 5%;
+    bottom: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1rem;
+    position: absolute;
+}
+
+.footer a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.4);
+    transition: all 0.25s ease-in-out;
+}
+
+.footer a:hover {
+    color: tomato;
+}
