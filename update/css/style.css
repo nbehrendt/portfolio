@@ -1,0 +1,379 @@
+/* Base */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #F7F0F5;
+  height: 100%;
+  transition: all 0.6s ease;
+  width: 100%;
+}
+
+body {
+  margin-top: -22px; /* not cooperating */
+  font-family: 'Arvo', serif;
+}
+
+/* Layout */
+
+.name {
+  display: inline-block;
+  font-family: 'Suez One', serif;
+  position: relative;
+  transition: all 0.5s ease;
+  top: 20px;
+}
+
+.sub-name {
+  font-family: 'Permanent Marker', cursive;
+  margin: 0 auto;
+  position: relative;
+  top: -30px;
+}
+
+.main {
+  height: 100%;
+  margin: 0 auto;
+  min-width: 800px;
+  text-align: center;
+  width: 60%;
+}
+
+@media(max-width: 800px) {
+  .main {
+    min-width: 0px;
+    width: 100%;
+  }
+}
+
+.color-block {
+  color: #F7F0F5;;
+  cursor: pointer;
+  display: inline-block;
+  height: 300px;
+  margin: 20px;
+  transition: all 0.5s ease;
+  width: 300px;
+}
+
+@media(max-width: 800px) {
+  .color-block {
+    margin: 20px 10px 0 10px;
+  }
+}
+
+.color-block:hover {
+  border: 2px solid #F7F0F5;
+}
+
+.box-title {
+  font-size: 1.6rem;
+  top: 42%;
+  position: relative;
+  vertical-align: middle;
+  width: auto;
+}
+
+.box-title:before {
+  content: "";
+  background: #F7F0F5;;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.color-block:hover > .box-title:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+#dev {
+  background: #746D75;
+  border: 2px solid rgba(0,0,0,0);
+  transition: background 0.3s ease;
+}
+
+#design {
+  background: #65B891;
+  border: 2px solid rgba(0,0,0,0);
+  transition: background 0.3s ease;
+}
+
+#about {
+  background: #DACC3E;
+  border: 2px solid rgba(0,0,0,0);
+  transition: background 0.3s ease;
+}
+
+#contact {
+  background: #7FB7BE;
+  border: 2px solid rgba(0,0,0,0);
+  transition: background 0.3s ease;
+}
+
+.intro {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1.6rem;
+}
+
+/* Typography */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Navigation */
+
+.dev-list {
+  font-size: 1.1rem;
+  margin: 0;
+  text-align: left;
+}
+
+li {
+  font-size: 1em;
+}
+
+/* Main content section */
+
+.slide {
+  background: rgba(255,255,255,0.9);
+  border: 2px solid rgba(0,0,0,0.2);
+  display: hidden;
+  height: 80%;
+  left: 10%;
+  overflow: hidden;
+  position: absolute;
+  text-align: left;
+  top: 100px;
+  transition: all .4s ease-in-out;
+  width: 80%;
+}
+
+@media(max-width: 800px) {
+  .slide {
+    left: 2.5%;
+    width: 95%;
+  }
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide-content {
+  display: none;
+  height: 80%;
+  margin: 0 auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  width: 90%;
+}
+
+@media(max-width: 800px) {
+  .slide-content {
+    width: 95%;
+  }
+}
+
+.slide-content.active {
+  display: block;
+}
+
+.visit-live-site {
+  background: #3a46af;
+  border: 1px solid rgba(0,0,0,0);
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.visit-live-site:hover {
+  background: #fff;
+  border: 1px solid #3a46af;
+  color: #3a46af;
+}
+
+.project-title {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.project-involvement {
+  display: block;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.dev-text {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  text-align: left;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.dev-screen {
+  box-shadow: 0px 0px 40px #ababab;
+  height: auto;
+  margin: 15px auto;
+  overflow: auto;
+  text-align: center;
+  width: 80%;
+}
+
+.design-screen {
+  height: auto;
+  margin: 15px auto;
+  max-width: 400px;
+  overflow: auto;
+  text-align: center;
+  width: 80%;
+}
+
+/* Slide Controls */
+
+.slide-controls {
+  border-bottom: 3px solid #ddd;
+  border-radius: 5px;
+  height: 50px;
+  text-align: center;
+}
+
+.slide-nav {
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  position: relative;
+  top: 3px;
+  transition: all 0.3 ease;
+}
+
+.slide-nav:hover {
+  color: tomato;
+}
+
+.close-slide {
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  transition: all 0.3s ease;
+}
+
+.close-slide:hover {
+  color: tomato;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
+
+.active {
+  opacity: 1;
+  transition: all 0.3s ease;
+  visibility: visible;
+}
+
+.hidden {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.slide-hidden {
+  height: 0;
+  width: 0;
+}
+
+#about-slide > .slide-content,
+#contact-slide > .slide-content {
+  top: 30px;
+}
+
+.about-text {
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+
+.about-text h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+}
+
+.email-me:hover {
+  color: tomato;
+  transition: all 0.3s ease;
+}
+
+.linkedin:hover {
+  color: #0077B5;
+  transition: all 0.3s ease;
+}
+
+.github:hover {
+  color: #6cc644;
+  transition: all 0.3s ease;
+}
+
+.contact-email a {
+  color: #000;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.contact-email a:hover {
+  color: #000;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.example-image {
+  max-width: 300px;
+}
+
+.slide-image {
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+  float: none;
+  vertical-align: middle;
+  transition: all 0.25 ease-in-out;
+}
+
+.example-text {
+  display: inline-block;
+  height: 100%;
+  width: 42%;
+  margin: 0 0;
+  position: relative;
+  top: 0;
+  float: right;
+  right: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.example-text h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding-bottom: 4%;
+}
