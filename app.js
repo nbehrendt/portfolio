@@ -27,6 +27,16 @@ $('.navTable td').click(function () {
 
 });
 
+//Mobile menu
+
+var $mobileMenuToggle = $('.js-mobile-menu-toggle');
+
+$mobileMenuToggle.click(function(){
+  $('.mobile-nav').toggleClass('mobile-show');
+  $('.container').toggleClass('hidden');
+  $('.navTable').toggleClass('hidden');
+});
+
 
 //Examples carousel
 var count = 0;
